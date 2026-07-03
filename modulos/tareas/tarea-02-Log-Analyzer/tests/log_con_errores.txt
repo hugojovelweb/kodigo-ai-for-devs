@@ -1,0 +1,13 @@
+[INFO] 2025-01-10 User logged in
+[WARNING] Invalid password attempt
+[ERROR] 2025-13-40 Failed to connect to database
+User session expired without severity tag
+
+[DEBUG] 2025-01-10 Unrecognized severity level used here
+[ERROR] 2025-01-11 Timeout while calling payment API
+[info] 2025-01-11 lowercase severity should still be recognized
+[WARNING] 2025-02-30 Invalid calendar date (February 30th does not exist)
+[ERROR]
+[INFO] 2025-01-12 Cache cleared successfully
+   
+[CRITICAL] 2025-01-12 Another unrecognized severity level
