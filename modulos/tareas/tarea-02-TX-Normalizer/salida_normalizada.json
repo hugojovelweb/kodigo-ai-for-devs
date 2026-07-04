@@ -1,0 +1,259 @@
+{
+  "transacciones_validas": [
+    {
+      "id": "tx_001",
+      "amount": 100.5,
+      "currency": "USD",
+      "timestamp": "2025-03-10T14:22:00Z",
+      "status": "SUCCESS",
+      "source": "source_a"
+    },
+    {
+      "id": "tx_002",
+      "amount": 45.0,
+      "currency": "GBP",
+      "timestamp": "2025-03-11T09:05:32Z",
+      "status": "PENDING",
+      "source": "source_a"
+    },
+    {
+      "id": "204",
+      "amount": 100.5,
+      "currency": "USD",
+      "timestamp": "2025-03-10T14:22:00Z",
+      "status": "SUCCESS",
+      "source": "source_b"
+    },
+    {
+      "id": "205",
+      "amount": 50.0,
+      "currency": "EUR",
+      "timestamp": "2025-03-11T08:15:00Z",
+      "status": "PENDING",
+      "source": "source_b"
+    },
+    {
+      "id": "A-77",
+      "amount": 99.99,
+      "currency": "EUR",
+      "timestamp": "2025-03-10T14:22:00Z",
+      "status": "SUCCESS",
+      "source": "source_c"
+    },
+    {
+      "id": "A-78",
+      "amount": 150.0,
+      "currency": "GBP",
+      "timestamp": "2025-03-11T16:40:00Z",
+      "status": "FAILED",
+      "source": "source_c"
+    }
+  ],
+  "transacciones_invalidas": [
+    {
+      "source": "source_a",
+      "reasons": [
+        "id vacío en source_a"
+      ],
+      "original_record": {
+        "id": "",
+        "amount": 20.0,
+        "currency": "USD",
+        "timestamp": "2025-03-11 11:00:00",
+        "status": "completed"
+      }
+    },
+    {
+      "source": "source_a",
+      "reasons": [
+        "moneda no soportada: 'JPY'"
+      ],
+      "original_record": {
+        "id": "tx_005",
+        "amount": 15.75,
+        "currency": "JPY",
+        "timestamp": "2025-03-11 12:00:00",
+        "status": "completed"
+      }
+    },
+    {
+      "source": "source_a",
+      "reasons": [
+        "monto no numérico en source_a: 'abc'"
+      ],
+      "original_record": {
+        "id": "tx_006",
+        "amount": "abc",
+        "currency": "USD",
+        "timestamp": "2025-03-11 13:00:00",
+        "status": "completed"
+      }
+    },
+    {
+      "source": "source_a",
+      "reasons": [
+        "formato de fecha inválido en source_a: '11-03-2025'"
+      ],
+      "original_record": {
+        "id": "tx_007",
+        "amount": 200.0,
+        "currency": "USD",
+        "timestamp": "11-03-2025",
+        "status": "completed"
+      }
+    },
+    {
+      "source": "source_b",
+      "reasons": [
+        "estado no reconocido en source_b: 'UNKNOWN_STATE'"
+      ],
+      "original_record": {
+        "transaction_id": 207,
+        "total": 7500,
+        "currency_code": "usd",
+        "created_at": "11/03/2025 10:45",
+        "state": "UNKNOWN_STATE"
+      }
+    },
+    {
+      "source": "source_b",
+      "reasons": [
+        "formato de fecha inválido en source_b: '2025/03/11 11:00'"
+      ],
+      "original_record": {
+        "transaction_id": 208,
+        "total": 12000,
+        "currency_code": "mxn",
+        "created_at": "2025/03/11 11:00",
+        "state": "OK"
+      }
+    },
+    {
+      "source": "source_c",
+      "reasons": [
+        "no se pudo determinar la moneda del monto: '99,99'"
+      ],
+      "original_record": {
+        "ref": "A-80",
+        "amount": "99,99",
+        "date": "2025-03-11T18:00:00Z",
+        "result": "success"
+      }
+    },
+    {
+      "source": "source_c",
+      "reasons": [
+        "formato de fecha inválido en source_c: '11/03/2025'"
+      ],
+      "original_record": {
+        "ref": "A-81",
+        "amount": "€250,50",
+        "date": "11/03/2025",
+        "result": "success"
+      }
+    },
+    {
+      "source": "source_c",
+      "reasons": [
+        "ref vacío en source_c"
+      ],
+      "original_record": {
+        "ref": "",
+        "amount": "€10,00",
+        "date": "2025-03-11T19:00:00Z",
+        "result": "pending"
+      }
+    },
+    {
+      "source": "desconocida",
+      "reasons": [
+        "Fuente no reconocida: el registro no coincide con ningún esquema conocido"
+      ],
+      "original_record": {
+        "codigo_desconocido": true,
+        "valor": 100
+      }
+    },
+    {
+      "source": "source_a",
+      "reasons": [
+        "monto inválido (debe ser > 0): -12.0"
+      ],
+      "original_record": {
+        "id": "tx_003",
+        "amount": -12.0,
+        "currency": "USD",
+        "timestamp": "2025-03-11T10:00:00Z",
+        "status": "FAILED",
+        "source": "source_a"
+      }
+    },
+    {
+      "source": "source_b",
+      "reasons": [
+        "monto inválido (debe ser > 0): 0.0"
+      ],
+      "original_record": {
+        "id": "206",
+        "amount": 0.0,
+        "currency": "USD",
+        "timestamp": "2025-03-11T09:30:00Z",
+        "status": "SUCCESS",
+        "source": "source_b"
+      }
+    },
+    {
+      "source": "source_c",
+      "reasons": [
+        "monto inválido (debe ser > 0): 0.0"
+      ],
+      "original_record": {
+        "id": "A-79",
+        "amount": 0.0,
+        "currency": "USD",
+        "timestamp": "2025-03-11T17:10:00Z",
+        "status": "SUCCESS",
+        "source": "source_c"
+      }
+    }
+  ],
+  "metricas": {
+    "total_procesadas": 19,
+    "total_validas": 6,
+    "total_invalidas": 13,
+    "porcentaje_validas": 31.58,
+    "conteo_por_estado": {
+      "SUCCESS": 3,
+      "PENDING": 2,
+      "FAILED": 1
+    },
+    "conteo_por_moneda": {
+      "USD": 2,
+      "GBP": 2,
+      "EUR": 2
+    },
+    "totales_por_moneda": {
+      "USD": 201.0,
+      "GBP": 195.0,
+      "EUR": 149.99
+    },
+    "conteo_por_fuente": {
+      "source_a": 2,
+      "source_b": 2,
+      "source_c": 2
+    },
+    "motivos_invalidez_frecuentes": {
+      "monto inválido (debe ser > 0)": 3,
+      "id vacío en source_a": 1,
+      "moneda no soportada": 1,
+      "monto no numérico en source_a": 1,
+      "formato de fecha inválido en source_a": 1,
+      "estado no reconocido en source_b": 1,
+      "formato de fecha inválido en source_b": 1,
+      "no se pudo determinar la moneda del monto": 1,
+      "formato de fecha inválido en source_c": 1,
+      "ref vacío en source_c": 1,
+      "Fuente no reconocida": 1
+    }
+  }
+}
