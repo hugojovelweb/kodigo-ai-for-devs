@@ -1,0 +1,14 @@
+[
+  { "id": "tx_101", "amount": 250.00, "currency": "USD", "timestamp": "2025-04-01 10:00:00", "status": "completed" },
+  { "id": "tx_102", "amount": 89.90,  "currency": "EUR", "timestamp": "2025-04-01 11:15:00", "status": "completed" },
+  { "id": "tx_103", "amount": 15.20,  "currency": "GBP", "timestamp": "2025-04-01 12:30:00", "status": "pending" },
+  { "id": "tx_104", "amount": 500.00, "currency": "USD", "timestamp": "2025-04-01 13:45:00", "status": "cancelled" },
+
+  { "transaction_id": 301, "total": 30000, "currency_code": "usd", "created_at": "01/04/2025 09:00", "state": "OK" },
+  { "transaction_id": 302, "total": 4599,  "currency_code": "eur", "created_at": "01/04/2025 10:20", "state": "PROCESSING" },
+  { "transaction_id": 303, "total": 12345, "currency_code": "gbp", "created_at": "01/04/2025 14:10", "state": "ERROR" },
+
+  { "ref": "B-01", "amount": "€300,00", "date": "2025-04-01T15:00:00Z", "result": "success" },
+  { "ref": "B-02", "amount": "$45,50",  "date": "2025-04-01T16:20:00Z", "result": "success" },
+  { "ref": "B-03", "amount": "£20,00",  "date": "2025-04-01T17:00:00Z", "result": "pending" }
+]
