@@ -1,0 +1,85 @@
+{
+  "_descripcion": "Archivo de reglas de normalización. Estas reglas son decisiones de diseño tomadas explícitamente por el desarrollador (no generadas ni decididas por IA). La IA solo ayudó a dar formato/estructura al archivo.",
+
+  "fuentes_reconocidas": {
+    "source_a": {
+      "descripcion": "Formato tipo A: pasarela propia. Campos: id, amount, currency, timestamp, status",
+      "campos_clave": ["id", "amount", "currency", "timestamp", "status"]
+    },
+    "source_b": {
+      "descripcion": "Formato tipo B: proveedor externo (montos en centavos). Campos: transaction_id, total, currency_code, created_at, state",
+      "campos_clave": ["transaction_id", "total", "currency_code", "created_at", "state"]
+    },
+    "source_c": {
+      "descripcion": "Formato tipo C: pasarela europea (monto con símbolo y coma decimal). Campos: ref, amount, date, result",
+      "campos_clave": ["ref", "amount", "date", "result"]
+    }
+  },
+
+  "mapeo_estados": {
+    "_descripcion": "Todo estado de origen se traduce a uno de estos 3 valores normalizados: SUCCESS | FAILED | PENDING",
+    "source_a": {
+      "completed": "SUCCESS",
+      "success": "SUCCESS",
+      "failed": "FAILED",
+      "cancelled": "FAILED",
+      "error": "FAILED",
+      "pending": "PENDING",
+      "processing": "PENDING"
+    },
+    "source_b": {
+      "OK": "SUCCESS",
+      "COMPLETED": "SUCCESS",
+      "ERROR": "FAILED",
+      "FAILED": "FAILED",
+      "DECLINED": "FAILED",
+      "PENDING": "PENDING",
+      "PROCESSING": "PENDING"
+    },
+    "source_c": {
+      "success": "SUCCESS",
+      "ok": "SUCCESS",
+      "failed": "FAILED",
+      "error": "FAILED",
+      "declined": "FAILED",
+      "pending": "PENDING",
+      "processing": "PENDING"
+    }
+  },
+
+  "monedas_soportadas": {
+    "_descripcion": "Códigos ISO 4217 aceptados por el sistema. Cualquier otro código o símbolo no listado se marca como transacción inválida.",
+    "codigos_validos": ["USD", "EUR", "GBP", "MXN", "SVC"],
+    "simbolo_a_codigo": {
+      "$": "USD",
+      "€": "EUR",
+      "£": "GBP"
+    }
+  },
+
+  "formatos_fecha": {
+    "_descripcion": "Formatos de fecha esperados por fuente, usados por el parser con strptime/fromisoformat. Todas se normalizan a ISO-8601 UTC (YYYY-MM-DDTHH:MM:SSZ).",
+    "source_a": "%Y-%m-%d %H:%M:%S",
+    "source_b": "%d/%m/%Y %H:%M",
+    "source_c": "ISO-8601 nativo (ej. 2025-03-10T14:22:00Z)"
+  },
+
+  "reglas_conversion_monto": {
+    "source_a": "El monto ya viene en unidad decimal estándar (ej. 100.50). Se usa tal cual, redondeado a 2 decimales.",
+    "source_b": "El monto viene en centavos como entero (ej. 10050). Se divide entre 100 para obtener el valor decimal (100.50).",
+    "source_c": "El monto viene como texto con símbolo de moneda y coma decimal (ej. '€99,99'). Se extrae el símbolo, se reemplaza la coma por punto y se convierte a float."
+  },
+
+  "politica_validacion": {
+    "_descripcion": "Qué hacer con transacciones inválidas: NO se descartan silenciosamente. Se separan en una lista aparte (transacciones_invalidas) con el motivo del error, para trazabilidad y auditoría.",
+    "accion": "separar_y_marcar",
+    "campos_obligatorios": ["id_normalizado", "amount", "currency", "timestamp", "status_origen"],
+    "reglas": [
+      "El monto debe ser numérico y mayor a 0",
+      "La moneda debe estar en 'monedas_soportadas.codigos_validos' luego de normalizar símbolo/código",
+      "La fecha debe poder parsearse con el formato definido para su fuente",
+      "El estado de origen debe existir en 'mapeo_estados' para esa fuente",
+      "El identificador (id / transaction_id / ref) no puede estar vacío o nulo"
+    ]
+  }
+}
