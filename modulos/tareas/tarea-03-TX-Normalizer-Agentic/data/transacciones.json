@@ -1,0 +1,129 @@
+[
+  {
+    "id": "tx_001",
+    "amount": 100.50,
+    "currency": "USD",
+    "timestamp": "2025-03-10 14:22:00",
+    "status": "completed"
+  },
+  {
+    "id": "tx_002",
+    "amount": 45.00,
+    "currency": "GBP",
+    "timestamp": "2025-03-11 09:05:32",
+    "status": "pending"
+  },
+  {
+    "id": "tx_003",
+    "amount": -12.00,
+    "currency": "USD",
+    "timestamp": "2025-03-11 10:00:00",
+    "status": "failed"
+  },
+  {
+    "id": "",
+    "amount": 20.00,
+    "currency": "USD",
+    "timestamp": "2025-03-11 11:00:00",
+    "status": "completed"
+  },
+  {
+    "id": "tx_005",
+    "amount": 15.75,
+    "currency": "JPY",
+    "timestamp": "2025-03-11 12:00:00",
+    "status": "completed"
+  },
+  {
+    "id": "tx_006",
+    "amount": "abc",
+    "currency": "USD",
+    "timestamp": "2025-03-11 13:00:00",
+    "status": "completed"
+  },
+  {
+    "id": "tx_007",
+    "amount": 200.00,
+    "currency": "USD",
+    "timestamp": "11-03-2025",
+    "status": "completed"
+  },
+
+  {
+    "transaction_id": 204,
+    "total": 10050,
+    "currency_code": "usd",
+    "created_at": "10/03/2025 14:22",
+    "state": "OK"
+  },
+  {
+    "transaction_id": 205,
+    "total": 5000,
+    "currency_code": "eur",
+    "created_at": "11/03/2025 08:15",
+    "state": "PROCESSING"
+  },
+  {
+    "transaction_id": 206,
+    "total": 0,
+    "currency_code": "usd",
+    "created_at": "11/03/2025 09:30",
+    "state": "OK"
+  },
+  {
+    "transaction_id": 207,
+    "total": 7500,
+    "currency_code": "usd",
+    "created_at": "11/03/2025 10:45",
+    "state": "UNKNOWN_STATE"
+  },
+  {
+    "transaction_id": 208,
+    "total": 12000,
+    "currency_code": "mxn",
+    "created_at": "2025/03/11 11:00",
+    "state": "OK"
+  },
+
+  {
+    "ref": "A-77",
+    "amount": "€99,99",
+    "date": "2025-03-10T14:22:00Z",
+    "result": "success"
+  },
+  {
+    "ref": "A-78",
+    "amount": "£150,00",
+    "date": "2025-03-11T16:40:00Z",
+    "result": "failed"
+  },
+  {
+    "ref": "A-79",
+    "amount": "$0,00",
+    "date": "2025-03-11T17:10:00Z",
+    "result": "success"
+  },
+  {
+    "ref": "A-80",
+    "amount": "99,99",
+    "date": "2025-03-11T18:00:00Z",
+    "result": "success"
+  },
+  {
+    "ref": "A-81",
+    "amount": "€250,50",
+    "date": "11/03/2025",
+    "result": "success"
+  },
+  {
+    "ref": "",
+    "amount": "€10,00",
+    "date": "2025-03-11T19:00:00Z",
+    "result": "pending"
+  },
+
+  {
+    "codigo_desconocido": true,
+    "valor": 100
+  }
+]
