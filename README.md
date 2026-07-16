@@ -8,3 +8,18 @@ El Bootcamp **AI for Developers** tiene una duración aproximada de **6 semanas*
 
 Durante el programa se desarrolla una mentalidad **AI-First**, permitiendo diseñar, construir, optimizar y mantener aplicaciones utilizando IA como un copiloto técnico, sin perder el criterio ingenieril ni las buenas prácticas del desarrollo profesional.
 
+🎯 Objetivos del Bootcamp
+
+Al finalizar este bootcamp el desarrollador será capaz de:
+
+- Comprender el paradigma AI-First Development.
+- Utilizar herramientas de IA para acelerar el ciclo de desarrollo.
+- Crear prompts profesionales para ingeniería de software.
+- Automatizar tareas repetitivas del desarrollo.
+- Aplicar técnicas de Pair Programming asistido por IA.
+- Refactorizar código utilizando IA manteniendo estándares de calidad.
+- Diseñar APIs y aplicaciones funcionales apoyadas por modelos LLM.
+- Validar respuestas generadas por IA mediante pensamiento crítico.
+- Integrar IA dentro de procesos reales de desarrollo.
+- Aplicar principios éticos y de responsabilidad en el uso de IA.
+
