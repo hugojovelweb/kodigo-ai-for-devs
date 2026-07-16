@@ -61,4 +61,24 @@ La responsabilidad final sobre:
 
 siempre pertenece al desarrollador.
 
+# 🎯 Resultado Esperado
+
+Al concluir el bootcamp el estudiante será capaz de:
+
+✅ Integrar IA dentro de proyectos reales.
+
+✅ Diseñar soluciones utilizando herramientas modernas.
+
+✅ Automatizar parte del ciclo de desarrollo.
+
+✅ Reducir tiempos de implementación.
+
+✅ Mejorar la calidad del código.
+
+✅ Desarrollar aplicaciones de forma más eficiente.
+
+✅ Trabajar bajo un enfoque AI-First.
+
+✅ Colaborar eficazmente con modelos de IA sin perder el pensamiento crítico.
+
 
