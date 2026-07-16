@@ -61,9 +61,7 @@ La responsabilidad final sobre:
 
 siempre pertenece al desarrollador.
 
-# 🎯 Resultado Esperado
-
-Al concluir el bootcamp el estudiante será capaz de:
+# 🎯 Resultado Esperado: 
 
 ✅ Integrar IA dentro de proyectos reales.
 
@@ -80,5 +78,19 @@ Al concluir el bootcamp el estudiante será capaz de:
 ✅ Trabajar bajo un enfoque AI-First.
 
 ✅ Colaborar eficazmente con modelos de IA sin perder el pensamiento crítico.
+
+# 🚀 Perfil del Developer al Finalizar
+
+El desarrollador egresado contará con competencias para:
+
+- Desarrollador Full Stack asistido por IA
+- Backend Developer
+- Frontend Developer
+- Software Engineer
+- AI Assisted Developer
+- Prompt Engineer 
+- API Developer
+- Automation Developer
+- Technical Problem Solver
 
 
