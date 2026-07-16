@@ -23,3 +23,18 @@ Al finalizar este bootcamp el desarrollador será capaz de:
 - Integrar IA dentro de procesos reales de desarrollo.
 - Aplicar principios éticos y de responsabilidad en el uso de IA.
 
+- # 🧠 Competencias a Desarrollar
+
+Durante el programa se fortalecerán competencias como:
+
+- Pensamiento crítico
+- Ingeniería de Software
+- Arquitectura de aplicaciones
+- Automatización de procesos
+- Resolución de problemas
+- Optimización de código
+- Diseño de soluciones
+- Comunicación técnica
+- Documentación profesional
+- Trabajo colaborativo humano + IA
+
