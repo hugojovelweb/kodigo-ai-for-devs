@@ -1,5 +1,6 @@
 # Diseño e Integración de Skills Agénticas en FastAPI
 ### Hugo Ernesto Jovel Hernández
+### AI For Developers 01
 
 Proyecto individual que integra una API REST modular en FastAPI con una skill basada en el estándar **Agent Skills**. La solución es autocontenida: no usa modelos ni servicios externos; sus resultados son cálculos locales, verificables y deterministas.
 
